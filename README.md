@@ -1,4 +1,4 @@
-# This are the dotfiles for a configuration of Neovim in VSCode :DD
+# These are the dotfiles for a configuration of Neovim in VSCode :DD
 
 ## All my VSCode extensions
 
