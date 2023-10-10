@@ -1,1 +1,1 @@
-# This are the dotfiles for my development enviorment :D
+This are the dotfiles for my development enviorment :D
