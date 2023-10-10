@@ -12,17 +12,19 @@ vnoremap K :m '<-2<CR>gv=gv
 " Navigate editor
 nnoremap <silent> <Space>t <Cmd>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>
 nnoremap <silent> <Space>f <Cmd>call VSCodeNotify('workbench.action.findInFiles')<CR>
-nnoremap <silent> <Space>b <Cmd>call VSCodeNotify('breadcrumbs.focusAndSelect')<CR>
 nnoremap <silent> <Space>e <Cmd>call VSCodeNotify('workbench.explorer.fileView.focus')<CR>
 nnoremap <silent> <Space>m <Cmd>call VSCodeNotify('editor.action.marker.nextInFiles')<CR>
 nnoremap <silent> <Space>g <Cmd>call VSCodeNotify('workbench.view.scm')<CR>
 nnoremap <silent> <Space>s <Cmd>call VSCodeNotify('workbench.action.splitEditor')<CR>
+nnoremap <silent> <Space>d <Cmd>call VSCodeNotify('workbench.view.debug')<CR>
 
 " Miscellaneous
+nnoremap <Space>v <C-v>
 nnoremap <silent> <Space>n :nohl<CR>
 vnoremap <Space>p "_dP
 nnoremap <silent> <Space>r <Cmd>call VSCodeNotify('editor.action.rename')<CR>
 nnoremap <silent> gD <Cmd>call VSCodeNotify('editor.action.revealDefinitionAside')<CR>
+nnoremap <silent> <Space>b <Cmd>call VSCodeNotify('editor.debug.action.toggleBreakpoint')<CR>
 inoremap <C-g> <C-o>
 nnoremap Q <nop>
 
@@ -35,10 +37,6 @@ xnoremap <silent> < <gv
 " Navigate through tabs
 nnoremap <silent> tab <Cmd>call VSCodeNotify('workbench.action.nextEditor')<CR> 
 nnoremap <silent> <S-tab> <Cmd>call VSCodeNotify('workbench.action.previousEditor')<CR>
-
-" Paste code
-nnoremap <C-v> "+p
-xnoremap <C-v> "+p
 
 " Paste code
 nnoremap <C-v> "+p
