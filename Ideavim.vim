@@ -1,18 +1,16 @@
 let mapleader = " "
 
-" Unbinds
-nnoremap s <NOP>
-vnoremap s <NOP>
-
 set number relativenumber
 set idearefactormode=keep
 set ideajoin
 set ignorecase
 set incsearch
+set multiple-cursors
+set commentary
+set surround
 
 " ---- [ Plugins ] ----
 Plug 'machakann/vim-highlightedyank'
-Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 
 " Vertical movement
@@ -24,9 +22,9 @@ nnoremap k gk
 " Miscellaneous
 vnoremap <Leader>p "_dP
 nnoremap <silent> <Leader>b :action ToggleLineBreakpoint<CR>
-nnoremap <silent> <Leader>r :action RenameElement<CR>
-vnoremap <silent> <Leader>r :action RenameElement<CR>
 vnoremap <silent> <Leader>s :action SurroundWith<CR>
+map <silent> <Leader>r :action RenameElement<CR>
+map <Leader>g :action Generate<CR>
 
 " Indentation
 nnoremap <silent> > >>
@@ -38,6 +36,7 @@ xnoremap <silent> < <gv
 map <Tab> :tabnext<CR>
 map <S-tab> :tabprev<CR>
 map <C-w> :action CloseEditor<CR>
+map <C-B> <C-O>
 
 " Undo Git commit
 map <Leader>z :action Vcs.RollbackChangedLines<CR>
@@ -51,17 +50,14 @@ xnoremap <C-v> "+p
 vmap <C-c> "+y
 
 " Navigate editor
-map <Leader>f :action FindInPath<CR>
-map <Leader>e :action ActivateProjectToolWindow<CR>
 map <Leader>d :action Debug<CR>
 map <Leader>t :NERDTreeToggle<CR>:Action EditorEscape<CR>
 map <Leader>m :action GotoNextError<CR>
 map <Leader>q :action CloseProject<CR>
-map <Leader>g :action ActivateCommitToolWindow<CR>
 map <C-h> :NERDTree<CR>
 
 " Hover
-map gh :action QuickJavaDoc<CR>
+map gh <Action>(ShowHoverInfo)
 
 " Shortcuts
 sethandler <S-Tab> a:vim
@@ -78,3 +74,4 @@ sethandler <C-T> a:vim
 sethandler <C-U> a:vim
 sethandler <C-V> a:vim
 sethandler <C-W> a:vim
+sethandler <C-B> a:vim
